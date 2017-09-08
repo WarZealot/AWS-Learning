@@ -36,6 +36,7 @@ public class S3EventProcessorCreateThumbnail implements RequestHandler<S3Event, 
             S3EventNotificationRecord record = s3event.getRecords().get(0);
 
             String srcBucket = record.getS3().getBucket().getName();
+
             // Object key may have spaces or unicode non-ASCII characters.
             String srcKey = record.getS3().getObject().getKey().replace('+', ' ');
             srcKey = URLDecoder.decode(srcKey, "UTF-8");

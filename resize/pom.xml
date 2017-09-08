@@ -26,7 +26,6 @@
             <artifactId>aws-java-sdk-s3</artifactId>
             <version>1.11.189</version>
         </dependency>
-
     </dependencies>
 
     <build>
