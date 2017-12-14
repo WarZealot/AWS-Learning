@@ -1,0 +1,14 @@
+﻿AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  Tracker:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: Handler
+      Runtime: java8
+      CodeUri: target/tracker-1.0-SNAPSHOT.jar
+      Description: ''
+      MemorySize: 512
+      Timeout: 10
+      Role: 'arn:aws:iam::613651897342:role/service-role/myNewRole'

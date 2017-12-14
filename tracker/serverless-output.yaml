@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  Tracker:
+    Properties:
+      CodeUri: s3://ktka-cloudformation-tracker/78ca78f585e9e634db7683c181a25ffc
+      Description: ''
+      Handler: Handler
+      MemorySize: 512
+      Role: arn:aws:iam::613651897342:role/service-role/myNewRole
+      Runtime: java8
+      Timeout: 10
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
